@@ -1,9 +1,11 @@
+/* 🔲 Base Styles */
 body {
     background-color: #000;
     color: #0ff;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
-    padding: 10%;
+    padding: 0;
+    margin: 0;
 }
 
 .intro-screen {
@@ -16,6 +18,7 @@ body {
     animation: pulse 2s infinite;
 }
 
+/* 🔄 Animations */
 @keyframes pulse {
     0% { text-shadow: 0 0 5px #0ff; }
     50% { text-shadow: 0 0 20px #0ff; }
@@ -27,6 +30,12 @@ body {
     to { opacity: 1; }
 }
 
+@keyframes slowRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 🌌 Comic Layout */
 .comic-container {
   position: relative;
   width: 100%;
@@ -37,9 +46,15 @@ body {
 .comic-bg {
   width: 100%;
   height: 100%;
-  background: url('/static/img/digigon_bg_placeholder.jpg') no-repeat center center;
+  background: url('/static/img/digiverse_bg.png') no-repeat center center fixed;
   background-size: cover;
   position: relative;
+  animation: subtlePulse 30s infinite alternate ease-in-out;
+}
+
+@keyframes subtlePulse {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(1.08); }
 }
 
 .overlay {
@@ -68,36 +83,7 @@ body {
 #panel2 { top: 30%; }
 #panel3 { top: 55%; }
 
-.nav-panels {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.nav-box {
-  background: rgba(0, 255, 255, 0.1);
-  border: 2px solid #0ff;
-  padding: 15px 25px;
-  color: #0ff;
-  cursor: pointer;
-  font-size: 1em;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  text-shadow: 0 0 10px #0ff;
-}
-
-.nav-box:hover {
-  background: #0ff;
-  color: #000;
-  text-shadow: none;
-}
-
+/* 🌐 Spherical Navigation */
 .sphere-container {
   display: flex;
   justify-content: center;
@@ -131,18 +117,13 @@ body {
   animation: slowRotate 20s linear infinite;
 }
 
-@keyframes slowRotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 .sphere:hover {
   transform: scale(1.15);
   box-shadow: 0 0 25px #fff, 0 0 40px currentColor, 0 0 80px currentColor;
   filter: brightness(1.2);
 }
 
-/* Individual planet styles */
+/* 🎨 Orb Themes */
 .sphere.join {
   background: radial-gradient(circle at 30% 30%, #0ff, #001F3F);
   color: #00FFFF;
