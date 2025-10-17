@@ -1,6 +1,13 @@
 services:
   - type: web
-    name: digiverse
+    name: digiverse-domain
     env: python
-    buildCommand: ""
-    startCommand: "python app.py"
+    region: oregon  # Or choose your preferred region
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    plan: free
+
+build:
+  envVars:
+    - key: FLASK_ENV
+      value: production
