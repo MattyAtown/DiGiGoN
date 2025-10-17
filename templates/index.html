@@ -18,15 +18,13 @@
     </div>
 
     <!-- Navigation Zones (Comic Buttons) -->
-    <div class="nav-panels">
-      <div class="nav-box" onclick="location.href='/origin'">🧬 The Origin</div>
-      <div class="nav-box" onclick="location.href='/characters'">🛡️ Wave Warriors</div>
-      <div class="nav-box" onclick="location.href='/comics'">📖 Codex</div>
-      <div class="nav-box" onclick="location.href='/decoders'">💡 Learn Code</div>
-      <div class="nav-box" onclick="location.href='/creatorlog'">⚙️ Creator Log</div>
-    </div>
-  </div>
+    <div class="sphere-container">
+  <div class="sphere join" onclick="location.href='/join'">Join<br>the DiGiVerse</div>
+  <div class="sphere comics" onclick="location.href='/comics'">Comic<br>Book<br>Collections</div>
+  <div class="sphere lore" onclick="location.href='/lore'">Book<br>Lore<br>Archives</div>
+</div>
 </div>
 
 <script src="{{ url_for('static', filename='js/comic_intro.js') }}"></script>
+
 {% endblock %}
