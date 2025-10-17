@@ -46,10 +46,10 @@ body {
 .comic-bg {
   width: 100%;
   height: 100%;
-  background: url('/static/img/digiverse_bg.png') no-repeat center center fixed;
+  background: url('/static/img/background1.png') no-repeat center center fixed;
   background-size: cover;
-  position: relative;
   animation: subtlePulse 30s infinite alternate ease-in-out;
+  position: relative;
 }
 
 @keyframes subtlePulse {
@@ -141,3 +141,4 @@ body {
   color: #DA70D6;
   border: 2px solid #DA70D6;
 }
+
