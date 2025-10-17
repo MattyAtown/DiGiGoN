@@ -46,7 +46,7 @@ body {
 .comic-bg {
   width: 100%;
   height: 100%;
-  background: url('/static/images/background1.png') no-repeat center center fixed;
+  background: url('/Static/images/background1.png') no-repeat center center fixed;
   background-size: cover;
   animation: subtlePulse 30s infinite alternate ease-in-out;
   position: relative;
@@ -141,6 +141,7 @@ body {
   color: #DA70D6;
   border: 2px solid #DA70D6;
 }
+
 
 
 
