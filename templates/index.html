@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="comic-container">
+  <!-- Background Illustration -->
+  <div class="comic-bg" id="comic-bg">
+    <div class="overlay"></div>
+
+    <!-- Comic Text Panels -->
+    <div class="comic-panel" id="panel1">
+      <p>“Before the stars, there was Code.”</p>
+    </div>
+    <div class="comic-panel" id="panel2">
+      <p>“And from the Code... came the Flame.”</p>
+    </div>
+    <div class="comic-panel" id="panel3">
+      <p><strong>DiGiGoN</strong><br>The Digital Dragon. The Creator. The Source Spark.</p>
+    </div>
+
+    <!-- Navigation Zones (Comic Buttons) -->
+    <div class="nav-panels">
+      <div class="nav-box" onclick="location.href='/origin'">🧬 The Origin</div>
+      <div class="nav-box" onclick="location.href='/characters'">🛡️ Wave Warriors</div>
+      <div class="nav-box" onclick="location.href='/comics'">📖 Codex</div>
+      <div class="nav-box" onclick="location.href='/decoders'">💡 Learn Code</div>
+      <div class="nav-box" onclick="location.href='/creatorlog'">⚙️ Creator Log</div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/comic_intro.js') }}"></script>
+{% endblock %}
