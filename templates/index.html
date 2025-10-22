@@ -1,31 +1,37 @@
-{% extends "base.html" %}
-
-{% block content %}
-<div class="comic-container">
-  <!-- Background Illustration -->
-  <div class="comic-bg" id="comic-bg">
-    <div class="overlay"></div>
-
-    <!-- Comic Text Panels -->
-    <div class="comic-panel" id="panel1">
-      <p>“Before the stars, there was Code.”</p>
-    </div>
-    <div class="comic-panel" id="panel2">
-      <p>“And from the Code... came the Flame.”</p>
-    </div>
-    <div class="comic-panel" id="panel3">
-      <p><strong>DiGiGoN</strong><br>The Digital Dragon. The Creator. The Source Spark.</p>
-    </div>
-
-    <!-- Glowing Orb Navigation Spheres -->
-    <div class="sphere-container">
-      <div class="sphere join" onclick="location.href='/join'">Join<br>the DiGiVerse</div>
-      <div class="sphere comics" onclick="location.href='/comics'">Comic Book<br>Collections</div>
-      <div class="sphere lore" onclick="location.href='/lore'">Book<br>Lore<br>Archives</div>
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DigiVerse Online</title>
+<link rel="stylesheet" href="/static/css/style.css">
+<script defer src="/static/js/script.js"></script>
+</head>
+<body>
+<div class="background">
+<!-- Header Section -->
+<header class="main-header">
+<img src="/static/images/logo.png" alt="DigiVerse Logo" class="logo">
+<div class="flashing-banner">ENTER THE CODE. SHAPE THE COSMOS.</div>
+<div class="top-right-controls">
+<button class="menu-button">☰</button>
+<a href="/login" class="login-tab">Login</a>
 </div>
+</header>
 
-<!-- Make sure this script stays inside the content block -->
-<script src="{{ url_for('static', filename='js/comic_intro.js') }}"></script>
-{% endblock %}
+
+<!-- Center Orbital Portal Zone -->
+<main class="portal-area">
+<div class="center-digiverse">DIGIVERSE</div>
+<div class="orbit-ring">
+<a href="/books" class="portal books">Books</a>
+<a href="/comics" class="portal comics">Comics</a>
+<a href="/games" class="portal games">Games</a>
+<a href="/characters" class="portal characters">Characters</a>
+<a href="/fanclub" class="portal fanclub">Fanclub</a>
+<a href="/ideas" class="portal ideas">The Ideas Room</a>
+</div>
+</main>
+</div>
+</body>
+</html>
