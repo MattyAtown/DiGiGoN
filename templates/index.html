@@ -1,37 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DigiVerse Online</title>
-<link rel="stylesheet" href="/static/css/style.css">
-<script defer src="/static/js/script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DigiVerse Online</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #000 url('/static/images/background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 40px;
+      height: 120px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .title-placeholder {
+      width: 400px;
+      height: 80px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 2px dashed rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .login-button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .flashing-banner {
+      margin: 20px auto;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px 20px;
+      border-radius: 8px;
+      width: 80%;
+      font-size: 1.1rem;
+      animation: flash 2s infinite alternate;
+    }
+
+    @keyframes flash {
+      0% { opacity: 1; }
+      100% { opacity: 0.5; }
+    }
+  </style>
 </head>
 <body>
-<div class="background">
-<!-- Header Section -->
-<header class="main-header">
-<img src="/static/images/logo.png" alt="DigiVerse Logo" class="logo">
-<div class="flashing-banner">ENTER THE CODE. SHAPE THE COSMOS.</div>
-<div class="top-right-controls">
-<button class="menu-button">☰</button>
-<a href="/login" class="login-tab">Login</a>
-</div>
-</header>
+  <header class="banner">
+    <div class="title-placeholder">DIGIVERSE TITLE BANNER</div>
+    <button class="login-button">Login</button>
+  </header>
 
-
-<!-- Center Orbital Portal Zone -->
-<main class="portal-area">
-<div class="center-digiverse">DIGIVERSE</div>
-<div class="orbit-ring">
-<a href="/books" class="portal books">Books</a>
-<a href="/comics" class="portal comics">Comics</a>
-<a href="/games" class="portal games">Games</a>
-<a href="/characters" class="portal characters">Characters</a>
-<a href="/fanclub" class="portal fanclub">Fanclub</a>
-<a href="/ideas" class="portal ideas">The Ideas Room</a>
-</div>
-</main>
-</div>
+  <div class="flashing-banner">
+    Flashing Banner Placeholder
+  </div>
 </body>
 </html>
